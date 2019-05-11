@@ -2,23 +2,25 @@
 
 public class PlayerCameraLook : MonoBehaviour
 {
-    [SerializeField]
-    private string mouseXInputName;
+    #region Variables -> Serialized Private
 
-    [SerializeField]
-    private string mouseYInputName;
+    [SerializeField] private Transform playerBody       = null;
 
-    [SerializeField]
-    private float mouseSensitivity;
+    [SerializeField] private string    mouseXInputName  = null;
+    [SerializeField] private string    mouseYInputName  = null;
 
-    [SerializeField]
-    private Transform playerBody;
+    [SerializeField] private float     mouseSensitivity = 2.0f;
 
-    private float mouseX;
+    #endregion
 
-    private float mouseY;
+    #region Variables -> Private
 
-    private float xAxisClamp;
+    private float mouseX         = 0.0f;
+    private float mouseY         = 0.0f;
+
+    private float xAxisClamp     = 0.0f;
+
+    #endregion
 
     private void Awake() {
         LockCursor();
@@ -35,8 +37,8 @@ public class PlayerCameraLook : MonoBehaviour
     }
 
     private void CameraRotation() {
-        mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
+        mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity;
+        mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity;
 
         xAxisClamp += mouseY;
 

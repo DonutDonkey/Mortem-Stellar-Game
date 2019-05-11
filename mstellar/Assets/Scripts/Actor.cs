@@ -3,14 +3,27 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour, IActor
 {
-    [SerializeField]
-    protected DActor actorData = null;
+    #region Variables -> Serialized Protected
 
-    protected float health = 0.0f;
+    [Tooltip("Actor scriptable object data")]
+    [SerializeField] protected DActor actorData = null;
 
-    protected float maxHealth = 0.0f;
+    #endregion
+
+    #region Variables -> Protected
+
+    protected float health      = 0.0f;
+    protected float maxHealth   = 0.0f;
+
+    protected bool  isAlive     = true;
+
+    #endregion
 
     //public List<Collider> List; for more advanced projects reminder
+
+    //testCollider.enabled = !testCollider.enabled;
+
+    #region Unity - Callbacks
 
     public virtual void Start() {
         maxHealth = actorData.maxHealth;
@@ -18,11 +31,27 @@ public class Actor : MonoBehaviour, IActor
         health = maxHealth;
     }
 
+    public void Update() {
+
+    }
+
+    #endregion
+
+    #region Methods -> Public
+
+    /// <summary>
+    /// Reduce actor health by damage number
+    /// </summary>
     public void TakeDamage(float damageNumber) {
         health = health - damageNumber;
     }
 
+    /// <summary>
+    /// Return actor health
+    /// </summary>
     public float GetHealth() {
         return health;
     }
+
+    #endregion
 }

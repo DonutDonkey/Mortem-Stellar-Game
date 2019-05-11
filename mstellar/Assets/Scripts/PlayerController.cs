@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,36 +8,51 @@ public class PlayerController : MonoBehaviour
     //Increase speed when jumping
     //Create Scriptable Objects for jump, speed, inputs 
 
-    [SerializeField]
-    private string horizontalInputName;
+    #region Variables -> Serialized Private
 
-    [SerializeField]
-    private string verticalInputName;
+    [SerializeField] private AnimationCurve jumpFallOff;
 
-    [SerializeField]
-    private float movementSpeed;
+    [SerializeField] private string         horizontalInputName      = null;
+    [SerializeField] private string         verticalInputName        = null;
 
-    [SerializeField]
-    private AnimationCurve jumpFallOff;
+    [SerializeField] private string         jumpKey                  = null;
 
-    [SerializeField]
-    private float jumpMultiplier;
+    [SerializeField] private float          movementSpeed            = 5.0f;
+    [SerializeField] private float          movementSpeedDiameter    = 1.0f;
 
-    [SerializeField]
-    private string jumpKey;
+    [SerializeField] private float          jumpMultiplier           = 5.0f;
 
-    private bool isJumping;
+    #endregion
 
-    private CharacterController characterController;
-    private Animator characterAnimator;
+    #region Variables -> Private
+
+    private bool                            isJumping                = false;
+    private bool                            speedIsDecreasing        = false;
+
+    private float                           maxSpeed                 = 5.0f;
+
+    private CharacterController             characterController      = null;
+    private Animator                        characterAnimator        = null;
+
+    #endregion
+
+    #region Methods -> Public
+
+    public void SetMaxSpeed(float maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+    
+    #endregion
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         characterAnimator = GetComponent<Animator>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         Movement();
+
+        JumpInput();
     }
 
     private void Movement() {
@@ -48,15 +64,18 @@ public class PlayerController : MonoBehaviour
 
         characterController.SimpleMove(forwardMovement + rightMovement);
 
-        characterAnimator.SetFloat("speed", (float)characterController.velocity.magnitude);
-
-        JumpInput();
+        characterAnimator.SetFloat("speed", characterController.velocity.magnitude); //Asign to own shit
     }
 
     private void JumpInput() {
         if(Input.GetButton(jumpKey) && !isJumping) {
             isJumping = true;
             StartCoroutine(JumpEvent());
+        }
+
+        if(!Input.GetButton(jumpKey) && characterController.isGrounded && !speedIsDecreasing) {
+            speedIsDecreasing = true;
+            StartCoroutine(DecreaseSpeed());
         }
     }
 
@@ -72,9 +91,23 @@ public class PlayerController : MonoBehaviour
             yield return null;
         } while (!characterController.isGrounded && characterController.collisionFlags != CollisionFlags.Above);
 
-        //Place for either movement increase based on player experience or stance reset
+        IncreaseSpeed();
 
         characterController.slopeLimit = 45.0f;
         isJumping = false;
+    }
+
+    private void IncreaseSpeed() {
+        if(movementSpeed < maxSpeed) {
+            movementSpeed += movementSpeedDiameter;
+        }
+    }
+
+    private IEnumerator DecreaseSpeed() {
+        while (5.0f < movementSpeed && speedIsDecreasing) {
+            movementSpeed -= movementSpeedDiameter;
+            yield return new WaitForSeconds(0.1f);
+        }
+        speedIsDecreasing = false;
     }
 }

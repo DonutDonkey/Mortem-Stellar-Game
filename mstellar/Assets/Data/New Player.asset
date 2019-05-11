@@ -15,6 +15,5 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   armor: 0
-  speed: 0
   maxArmor: 50
-  maxSpeed: 50
+  maxSpeed: 10
