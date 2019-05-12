@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: GreenGoo
   m_EditorClassIdentifier: Assembly-CSharp::DAnimatedTexture
-  textures: []
+  textures:
+  - {fileID: 2800000, guid: 99b74d012a87fe4428acca511922b4fb, type: 3}
+  - {fileID: 2800000, guid: cbbf12b8fde1cf749be35f199979d337, type: 3}

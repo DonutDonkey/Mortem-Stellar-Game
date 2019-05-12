@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     #region Variables -> Serialized Private
 
     [SerializeField] private AnimationCurve jumpFallOff;
+    [SerializeField] private GameObject[]   weaponObjects            = null;
 
     [SerializeField] private string         horizontalInputName      = null;
     [SerializeField] private string         verticalInputName        = null;
+    [SerializeField] private string         fireInputName            = null;
 
     [SerializeField] private string         jumpKey                  = null;
 
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController             characterController      = null;
     private Animator                        characterAnimator        = null;
+    private Animator                        weaponViewAnimator       = null;
 
     #endregion
 
@@ -47,12 +50,21 @@ public class PlayerController : MonoBehaviour
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         characterAnimator = GetComponent<Animator>();
+        weaponViewAnimator = weaponObjects[0].GetComponent<Animator>();
+    }
+
+    private void Update() {
+        if (Input.GetButtonDown(fireInputName)) {
+            weaponViewAnimator.SetBool("attack", true);
+        }
     }
 
     private void FixedUpdate() {
         Movement();
 
         JumpInput();
+
+        weaponViewAnimator.SetBool("attack", false);
     }
 
     private void Movement() {
