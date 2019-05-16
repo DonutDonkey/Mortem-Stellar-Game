@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController             characterController      = null;
     private Animator                        characterAnimator        = null;
-    private Animator                        weaponViewAnimator       = null;
+    private Animator                        weaponViewAnimator       = null;  // Switch to own method or script
 
     #endregion
 
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         characterAnimator = GetComponent<Animator>();
-        weaponViewAnimator = weaponObjects[0].GetComponent<Animator>();
+        weaponViewAnimator = weaponObjects[0].GetComponent<Animator>(); //need to be in own method / script
     }
 
     private void Update() {
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(JumpEvent());
         }
 
-        if(!Input.GetButton(jumpKey) && characterController.isGrounded && !speedIsDecreasing) {
+        if(!Input.GetButton(jumpKey) && characterController.isGrounded && !speedIsDecreasing && !isJumping) {
             speedIsDecreasing = true;
             StartCoroutine(DecreaseSpeed());
         }
