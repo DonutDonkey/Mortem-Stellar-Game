@@ -1,13 +1,20 @@
-﻿public class Player : Actor
+﻿using UnityEngine;
+
+public class Player : Actor
 {
-    private PlayerController controller;
-    private PlayerWeapons    weapons;
+    #region Variables -> Private
 
-    private float            armor;
-    private float            maxArmor;
+    private PlayerController   controller;
+    private PlayerWeapons      weapons;
 
-    private int              level;
+    private float              armor;
+    private float              maxArmor;
 
+    private int                level;
+
+    #endregion
+
+    #region Variables -> UnityCallbacks
 
     public override void Start() {
         base.Start();
@@ -24,5 +31,14 @@
     void Update() {
 
     }
+
+    private void OnTriggerEnter(UnityEngine.Collider other) {
+        if(other.tag == "WEP_02") {
+            weapons.PickupWeapon(2);
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    #endregion
 }
 
