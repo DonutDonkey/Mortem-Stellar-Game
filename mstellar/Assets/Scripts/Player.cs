@@ -1,12 +1,13 @@
 ﻿public class Player : Actor
 {
-    private float armor;
-
-    private float maxArmor;
-
-    private int level;
-
     private PlayerController controller;
+    private PlayerWeapons    weapons;
+
+    private float            armor;
+    private float            maxArmor;
+
+    private int              level;
+
 
     public override void Start() {
         base.Start();
@@ -16,6 +17,8 @@
 
         controller = GetComponent<PlayerController>();
         controller.SetMaxSpeed(((DPlayer)actorData).maxSpeed);
+
+        weapons = GetComponent<PlayerWeapons>();
     }
 
     void Update() {

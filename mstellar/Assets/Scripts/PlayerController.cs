@@ -10,32 +10,29 @@ public class PlayerController : MonoBehaviour
 
     #region Variables -> Serialized Private
 
-    [SerializeField] private AnimationCurve jumpFallOff;
-    [SerializeField] private GameObject[]   weaponObjects            = null;
+    [SerializeField] private AnimationCurve   jumpFallOff;
 
-    [SerializeField] private string         horizontalInputName      = null;
-    [SerializeField] private string         verticalInputName        = null;
-    [SerializeField] private string         fireInputName            = null;
+    [SerializeField] private string           horizontalInputName     = null;
+    [SerializeField] private string           verticalInputName       = null;
 
-    [SerializeField] private string         jumpKey                  = null;
+    [SerializeField] private string           jumpKey                 = null;
 
-    [SerializeField] private float          movementSpeed            = 5.0f;
-    [SerializeField] private float          movementSpeedDiameter    = 1.0f;
+    [SerializeField] private float            movementSpeed           = 5.0f;
+    [SerializeField] private float            movementSpeedDiameter   = 1.0f;
 
-    [SerializeField] private float          jumpMultiplier           = 5.0f;
+    [SerializeField] private float            jumpMultiplier          = 5.0f;
 
     #endregion
 
     #region Variables -> Private
 
-    private bool                            isJumping                = false;
-    private bool                            speedIsDecreasing        = false;
+    private CharacterController   characterController   = null;
+    private Animator              characterAnimator     = null;
 
-    private float                           maxSpeed                 = 5.0f;
+    private bool                  isJumping             = false;
+    private bool                  speedIsDecreasing     = false;
 
-    private CharacterController             characterController      = null;
-    private Animator                        characterAnimator        = null;
-    private Animator                        weaponViewAnimator       = null;  // Switch to own method or script
+    private float                 maxSpeed              = 5.0f;
 
     #endregion
 
@@ -50,21 +47,16 @@ public class PlayerController : MonoBehaviour
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         characterAnimator = GetComponent<Animator>();
-        weaponViewAnimator = weaponObjects[0].GetComponent<Animator>(); //need to be in own method / script
     }
 
     private void Update() {
-        if (Input.GetButtonDown(fireInputName)) {
-            weaponViewAnimator.SetBool("attack", true);
-        }
+        characterAnimator.SetFloat("speed", characterController.velocity.magnitude);
     }
 
     private void FixedUpdate() {
         Movement();
 
         JumpInput();
-
-        weaponViewAnimator.SetBool("attack", false);
     }
 
     private void Movement() {
@@ -75,8 +67,6 @@ public class PlayerController : MonoBehaviour
         Vector3 rightMovement = transform.right * horizontalInput;
 
         characterController.SimpleMove(forwardMovement + rightMovement);
-
-        characterAnimator.SetFloat("speed", characterController.velocity.magnitude); //Asign to own shit
     }
 
     private void JumpInput() {
@@ -89,6 +79,14 @@ public class PlayerController : MonoBehaviour
             speedIsDecreasing = true;
             StartCoroutine(DecreaseSpeed());
         }
+    }
+
+    private IEnumerator DecreaseSpeed() {
+        while (5.0f < movementSpeed && speedIsDecreasing) {
+            movementSpeed -= movementSpeedDiameter;
+            yield return new WaitForSeconds(0.1f);
+        }
+        speedIsDecreasing = false;
     }
 
     private IEnumerator JumpEvent() {
@@ -113,13 +111,5 @@ public class PlayerController : MonoBehaviour
         if(movementSpeed < maxSpeed) {
             movementSpeed += movementSpeedDiameter;
         }
-    }
-
-    private IEnumerator DecreaseSpeed() {
-        while (5.0f < movementSpeed && speedIsDecreasing) {
-            movementSpeed -= movementSpeedDiameter;
-            yield return new WaitForSeconds(0.1f);
-        }
-        speedIsDecreasing = false;
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - AlwaysVisibleCamera
+  - WEP_00
+  - WEP_01
+  - WEP_02
   layers:
   - Default
   - TransparentFX
