@@ -6,7 +6,7 @@ public class Actor : MonoBehaviour, IActor
     #region Variables -> Serialized Protected
 
     [Tooltip("Actor scriptable object data")]
-    [SerializeField] protected DActor actorData = null;
+    [SerializeField] protected DActor   actorData   = null;
 
     #endregion
 

@@ -36,13 +36,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    #region Methods -> Public
-
-    public void SetMaxSpeed(float maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
-    
-    #endregion
+    #region Methods -> UnityCallbacks
 
     private void Awake() {
         characterController = GetComponent<CharacterController>();
@@ -59,6 +53,14 @@ public class PlayerController : MonoBehaviour
         JumpInput();
     }
 
+    #endregion
+
+    #region Methods -> Public
+
+    public void SetMaxSpeed(float maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+    
     private void Movement() {
         float horizontalInput = Input.GetAxis(horizontalInputName) * movementSpeed;
         float verticalInput = Input.GetAxis(verticalInputName) * movementSpeed;
@@ -112,4 +114,6 @@ public class PlayerController : MonoBehaviour
             movementSpeed += movementSpeedDiameter;
         }
     }
+
+    #endregion
 }

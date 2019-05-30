@@ -8,12 +8,12 @@ using UnityEngine;
 public class AnimatedEnvironment : MonoBehaviour 
 {
     [Tooltip("Animated texture frames, will automatically go trough all frames")]
-    [SerializeField] private DAnimatedTexture animatedTexture = null;
+    [SerializeField] private DAnimatedTexture   animatedTexture   = null;
 
     [Tooltip("Speed at with animation will switch frames, highier number equals slower animation speed")]
-    [SerializeField] private float animationSpeed = 1.0f;
+    [SerializeField] private float              animationSpeed    = 1.0f;
 
-    private MeshRenderer meshRenderer;
+    private MeshRenderer   meshRenderer;
 
     IEnumerator Start()
     {

@@ -3,11 +3,11 @@
 [CreateAssetMenu(fileName = "New Player", menuName = "Game Specific Objects/Player")]
 public class DPlayer : DActor
 {
-    public float armor;
+    public float   armor;
 
-    public float maxArmor;
+    public float   maxArmor;
 
-    public float maxSpeed;
+    public float   maxSpeed;
 
     public DPlayer() {
         maxHealth = 100.0f;
