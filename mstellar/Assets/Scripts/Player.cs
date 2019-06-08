@@ -28,8 +28,7 @@ public class Player : Actor
         weapons = GetComponent<PlayerWeapons>();
     }
 
-    void Update() {
-
+    public override void Update() {
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other) {
@@ -40,5 +39,7 @@ public class Player : Actor
     }
 
     #endregion
+
+    /* Debug.LogError() */
 }
 

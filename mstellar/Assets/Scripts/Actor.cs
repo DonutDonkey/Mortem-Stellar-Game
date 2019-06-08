@@ -12,10 +12,10 @@ public class Actor : MonoBehaviour, IActor
 
     #region Variables -> Protected
 
-    protected float health      = 0.0f;
-    protected float maxHealth   = 0.0f;
+    protected float   health      = 0.0f;
+    protected float   maxHealth   = 0.0f;
 
-    protected bool  isAlive     = true;
+    protected bool    isAlive     = true;
 
     #endregion
 
@@ -31,7 +31,7 @@ public class Actor : MonoBehaviour, IActor
         health = maxHealth;
     }
 
-    public void Update() {
+    public virtual void Update() {
 
     }
 

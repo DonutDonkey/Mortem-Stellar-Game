@@ -1,56 +1,129 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //Clean code this mess
-    //Increase speed when jumping
-    //Create Scriptable Objects for jump, speed, inputs 
-
     #region Variables -> Serialized Private
 
-    [SerializeField] private AnimationCurve   jumpFallOff;
+    [SerializeField] private float      speedChangeDiameter   = 1.0f;
+    [SerializeField] private float      movementSpeed         = 5.0f;
+    [SerializeField] private float      jumpForce             = 7.0f;
 
-    [SerializeField] private string           horizontalInputName     = null;
-    [SerializeField] private string           verticalInputName       = null;
-
-    [SerializeField] private string           jumpKey                 = null;
-
-    [SerializeField] private float            movementSpeed           = 5.0f;
-    [SerializeField] private float            movementSpeedDiameter   = 1.0f;
-
-    [SerializeField] private float            jumpMultiplier          = 5.0f;
+    [SerializeField] private Animator   cameraAnimator        = null;
 
     #endregion
 
     #region Variables -> Private
 
     private CharacterController   characterController   = null;
-    private Animator              characterAnimator     = null;
 
-    private bool                  isJumping             = false;
-    private bool                  speedIsDecreasing     = false;
+    private Vector3               moveDirection         = Vector3.zero;
 
     private float                 maxSpeed              = 5.0f;
 
+    private bool                  speedIsDecreasing     = false;
+    private bool                  isJumping             = false;
+
     #endregion
 
-    #region Methods -> UnityCallbacks
+    #region Variables -> Public
 
-    private void Awake() {
+    public float    gravity               = 20.0f;
+
+    public string   horizontalInputName   = "Horizontal";
+    public string   verticalInputName     = "Vertical";
+    public string   jumpInputName         = "Jump";
+
+    #endregion
+
+    #region Methods -> Unity Callbacks
+
+    void Start() {
         characterController = GetComponent<CharacterController>();
-        characterAnimator = GetComponent<Animator>();
     }
 
-    private void Update() {
-        characterAnimator.SetFloat("speed", characterController.velocity.magnitude);
+    void Update() {
+        if (characterController.isGrounded) {
+            CheckForMovementIncrease();
+
+            UpdateMovement();
+
+            JumpInput();
+
+        }
+        else {
+            AirControl();
+        }
+        ApplyGravity();
+        characterController.Move(moveDirection * Time.deltaTime);
+
+        HeadBob();
     }
 
-    private void FixedUpdate() {
-        Movement();
 
-        JumpInput();
+    #endregion
+
+    #region Methods -> Private
+
+    private void UpdateMovement() {
+        moveDirection = new Vector3(Input.GetAxis(horizontalInputName), 0.0f, Input.GetAxis(verticalInputName));
+        moveDirection *= movementSpeed;
+        UpdateTransform();
+    }
+
+    private void JumpInput() {
+        if (Input.GetButton(jumpInputName)) {
+            isJumping = true;
+            Jump();
+        }
+        else if (!speedIsDecreasing) {
+            speedIsDecreasing = true;
+            StartCoroutine(DecreaseSpeed());
+        }
+    }
+
+    private void Jump() {
+        moveDirection.y = jumpForce;
+    }
+
+    private void AirControl() {
+        moveDirection.x = Input.GetAxis(horizontalInputName) * movementSpeed;
+        moveDirection.z = Input.GetAxis(verticalInputName) * movementSpeed;
+        UpdateTransform();
+    }
+
+    private void CheckForMovementIncrease() {
+        if (isJumping) {
+            isJumping = false;
+            IncreaseSpeed();
+        }
+    }
+
+    private void IncreaseSpeed() {
+        if (movementSpeed < maxSpeed) {
+            movementSpeed += speedChangeDiameter;
+        }
+    }
+
+    private IEnumerator DecreaseSpeed() {
+        while (5.0f < movementSpeed && speedIsDecreasing) {
+            movementSpeed -= speedChangeDiameter;
+            yield return new WaitForSeconds(0.1f);
+        }
+        speedIsDecreasing = false;
+    }
+
+    private void UpdateTransform() {
+        moveDirection = transform.TransformDirection(moveDirection);
+    }
+
+    private void ApplyGravity() {
+        moveDirection.y -= gravity * Time.deltaTime;
+    }
+
+    private void HeadBob() {
+        cameraAnimator.SetFloat("velocity", characterController.velocity.magnitude);
+        cameraAnimator.SetBool("isGrounded", characterController.isGrounded);
     }
 
     #endregion
@@ -59,60 +132,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetMaxSpeed(float maxSpeed) {
         this.maxSpeed = maxSpeed;
-    }
-    
-    private void Movement() {
-        float horizontalInput = Input.GetAxis(horizontalInputName) * movementSpeed;
-        float verticalInput = Input.GetAxis(verticalInputName) * movementSpeed;
-
-        Vector3 forwardMovement = transform.forward * verticalInput;
-        Vector3 rightMovement = transform.right * horizontalInput;
-
-        characterController.SimpleMove(forwardMovement + rightMovement);
-    }
-
-    private void JumpInput() {
-        if(Input.GetButton(jumpKey) && !isJumping) {
-            isJumping = true;
-            StartCoroutine(JumpEvent());
-        }
-
-        if(!Input.GetButton(jumpKey) && characterController.isGrounded && !speedIsDecreasing && !isJumping) {
-            speedIsDecreasing = true;
-            StartCoroutine(DecreaseSpeed());
-        }
-    }
-
-    private IEnumerator DecreaseSpeed() {
-        while (5.0f < movementSpeed && speedIsDecreasing) {
-            movementSpeed -= movementSpeedDiameter;
-            yield return new WaitForSeconds(0.1f);
-        }
-        speedIsDecreasing = false;
-    }
-
-    private IEnumerator JumpEvent() {
-        characterController.slopeLimit = 90.0f;
-        float timeInAir = 0.0f;
-
-        do 
-        {
-            float jumpForce = jumpFallOff.Evaluate(timeInAir);
-            characterController.Move(Vector3.up * jumpForce * jumpMultiplier * Time.deltaTime);
-            timeInAir += Time.deltaTime;
-            yield return null;
-        } while (!characterController.isGrounded && characterController.collisionFlags != CollisionFlags.Above);
-
-        IncreaseSpeed();
-
-        characterController.slopeLimit = 45.0f;
-        isJumping = false;
-    }
-
-    private void IncreaseSpeed() {
-        if(movementSpeed < maxSpeed) {
-            movementSpeed += movementSpeedDiameter;
-        }
     }
 
     #endregion

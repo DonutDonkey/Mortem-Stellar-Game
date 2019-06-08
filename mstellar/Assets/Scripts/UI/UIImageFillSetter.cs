@@ -13,6 +13,7 @@ public class UIImageFillSetter : MonoBehaviour
         image = GetComponent<Image>();
     }
     private void Update() {
-        image.fillAmount = fillAmount;
+        if(image.fillAmount != fillAmount)
+            image.fillAmount = fillAmount;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerCameraLook : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     #region Variables -> Serialized Private
 
@@ -15,10 +15,11 @@ public class PlayerCameraLook : MonoBehaviour
 
     #region Variables -> Private
 
-    private float   mouseX       = 0.0f;
-    private float   mouseY       = 0.0f;
+    private float                 mouseX                = 0.0f;
+    private float                 mouseY                = 0.0f;
+    private float                 xAxisClamp            = 0.0f;
 
-    private float   xAxisClamp   = 0.0f;
+    private bool                  shake                 = false;
 
     #endregion
 
@@ -26,7 +27,6 @@ public class PlayerCameraLook : MonoBehaviour
 
     private void Awake() {
         LockCursor();
-
         xAxisClamp = 0.0f;
     }
 

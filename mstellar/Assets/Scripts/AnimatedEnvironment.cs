@@ -13,7 +13,7 @@ public class AnimatedEnvironment : MonoBehaviour
     [Tooltip("Speed at with animation will switch frames, highier number equals slower animation speed")]
     [SerializeField] private float              animationSpeed    = 1.0f;
 
-    private MeshRenderer   meshRenderer;
+    private MeshRenderer   meshRenderer   = null;
 
     IEnumerator Start()
     {

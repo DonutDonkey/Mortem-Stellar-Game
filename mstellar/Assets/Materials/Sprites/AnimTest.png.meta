@@ -1,0 +1,797 @@
+fileFormatVersion: 2
+guid: 28317c24165410c4ca57387ef73195ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5776024510557895180
+    second: AnimTest 1_0
+  - first:
+      213: -8578381801371468428
+    second: AnimTest 1_1
+  - first:
+      213: 2429424952153698838
+    second: AnimTest 1_2
+  - first:
+      213: 2028299302658101735
+    second: AnimTest 1_3
+  - first:
+      213: -3399913136776089028
+    second: AnimTest 1_4
+  - first:
+      213: -7567274668552578325
+    second: AnimTest 1_5
+  - first:
+      213: -8240821096686564606
+    second: AnimTest 1_6
+  - first:
+      213: 1651399796709721477
+    second: AnimTest 1_7
+  - first:
+      213: 4829492396238750718
+    second: AnimTest 1_8
+  - first:
+      213: 4504810335679697907
+    second: AnimTest 1_9
+  - first:
+      213: 4313416697315529772
+    second: AnimTest 1_10
+  - first:
+      213: -263945185444668492
+    second: AnimTest 1_11
+  - first:
+      213: 5004499869420528816
+    second: AnimTest 1_12
+  - first:
+      213: -7860900941778746981
+    second: AnimTest 1_13
+  - first:
+      213: -8305186918583865066
+    second: AnimTest 1_14
+  - first:
+      213: -1510541508972737554
+    second: AnimTest 1_15
+  - first:
+      213: -5219573352931221238
+    second: AnimTest 1_16
+  - first:
+      213: 8641518480536515068
+    second: AnimTest 1_17
+  - first:
+      213: -8945713417380497573
+    second: AnimTest 1_18
+  - first:
+      213: -3695750192651711020
+    second: AnimTest 1_19
+  - first:
+      213: 5633833713485813561
+    second: AnimTest 1_20
+  - first:
+      213: -8229583220249052203
+    second: AnimTest 1_21
+  - first:
+      213: -6964676930281013284
+    second: AnimTest 1_22
+  - first:
+      213: 9128507430248534744
+    second: AnimTest 1_23
+  - first:
+      213: 7415298616019940379
+    second: AnimTest 1_24
+  - first:
+      213: 5685845511591063418
+    second: AnimTest 1_25
+  - first:
+      213: -8082229282352201672
+    second: AnimTest 1_26
+  - first:
+      213: -2589161762785645511
+    second: AnimTest 1_27
+  - first:
+      213: 1652172256095038504
+    second: AnimTest 1_28
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnimTest 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d7626199d52ef44bdc36f65ee6764b
+      internalID: -5776024510557895180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986b1011a12d76c4fb60e329f18e0376
+      internalID: -8578381801371468428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef473747cd4c1f4a87ddc8bde15a0c6
+      internalID: 2429424952153698838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 279
+        width: 67
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93940bc6bd0365b449bde6d600dea570
+      internalID: 2028299302658101735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b635e878328a3b4a9aa154ced14fff3
+      internalID: -3399913136776089028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b3596481c76bd47a39ead216fc40d4
+      internalID: -7567274668552578325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2774cf8b55bbbdc4ab73bb78f4808998
+      internalID: -8240821096686564606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 404
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc6bb459f924b94c8c9aca462e9f75f
+      internalID: 1651399796709721477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_8
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 279
+        width: 63
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e231f9775f72384bbd34fe4f14aa8c2
+      internalID: 4829492396238750718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_9
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 279
+        width: 66
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ccd6f4a8d75f8469973b13c3b87277
+      internalID: 4504810335679697907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 66
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b9f38cfaadf3242af0c536f9b709aa
+      internalID: 4313416697315529772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 271
+        width: 67
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cab604a9eedf0b4eb9ad552c4468d1c
+      internalID: -263945185444668492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 274
+        width: 66
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad07628e849b394693bfe136b33d4f7
+      internalID: 5004499869420528816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_13
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 277
+        width: 65
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6292cb054816a7647b49a38d39a19deb
+      internalID: -7860900941778746981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 275
+        width: 64
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5973bedda13b1594e926b73a272512fb
+      internalID: -8305186918583865066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 277
+        width: 63
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b10f7f1da2f4944ba5e7885fd1c12d9
+      internalID: -1510541508972737554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 139
+        width: 64
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b2aadb6bba57a4eb27a4abab6a3f71
+      internalID: -5219573352931221238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 139
+        width: 65
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5c4b55b0665334391402aabab0c98b
+      internalID: 8641518480536515068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 140
+        width: 67
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0992ada2ac4cb4da58c337b6ade66c
+      internalID: -8945713417380497573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_19
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 138
+        width: 129
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f26a657988a3c479167ac7c15194fa
+      internalID: -3695750192651711020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_20
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 141
+        width: 65
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3a4ea533e5eae49a4906abf9761573
+      internalID: 5633833713485813561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_21
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 142
+        width: 65
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0d0b46091206c4b800e920840409b1
+      internalID: -8229583220249052203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_22
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 142
+        width: 63
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e0e826be75eff41bd7523fbec149bf
+      internalID: -6964676930281013284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_23
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 141
+        width: 64
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5f89941c6075d419c4068d78a155ff
+      internalID: 9128507430248534744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 63
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84f974d073fdbf4ab59abebd06dba0f
+      internalID: 7415298616019940379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_25
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3
+        width: 64
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d58d67c8ff0db4698777e9e1b4cd25
+      internalID: 5685845511591063418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_26
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 3
+        width: 63
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472aaaf3323ba9d41a65056018934467
+      internalID: -8082229282352201672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_27
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3
+        width: 64
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271933feba6ea064080e7f6f0574b1e4
+      internalID: -2589161762785645511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimTest 1_28
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 3
+        width: 64
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770c16f73547f0d45ae865b2bc0edcfb
+      internalID: 1652172256095038504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c7c07819887906b44be76e290749ec95
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
