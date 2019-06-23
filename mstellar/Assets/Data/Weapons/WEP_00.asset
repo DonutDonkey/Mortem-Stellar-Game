@@ -18,4 +18,5 @@ MonoBehaviour:
   hasProjectile: 0
   projectile: {fileID: 0}
   damageValue: 10
-  fireRate: 1
+  fireRate: 0.7
+  range: 1

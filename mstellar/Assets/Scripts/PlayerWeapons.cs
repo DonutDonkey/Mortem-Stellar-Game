@@ -8,18 +8,23 @@ public class PlayerWeapons : MonoBehaviour
     [SerializeField] private List<GameObject>   weaponsObjectsList   = null;
     [SerializeField] private List<DWeapon>      weaponsDataList      = null;
 
-    [SerializeField] private string             fireInputName        = null;
-
     #endregion
 
     #region Variables -> Private
 
     private GameObject   currentActiveWeapon   = null;
+
     private bool         isLoading             = false;
 
     #endregion
 
     #region Variables -> Public
+
+    #endregion
+
+    #region Properties -> Public
+
+    public bool   IsLoading { get { return isLoading; } set { isLoading = value; } }
 
     #endregion
 
@@ -30,15 +35,7 @@ public class PlayerWeapons : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetButton(fireInputName)) {
-            Fire();
-        }
-
         WeaponSelection();
-    }
-
-    private void FixedUpdate() {
-        CancelAttackAnimation();
     }
 
     #endregion
@@ -51,7 +48,7 @@ public class PlayerWeapons : MonoBehaviour
         currentActiveWeapon = weaponsObjectsList[0];
         currentActiveWeapon.SetActive(true);
 
-        if (isLoading) {
+        if (IsLoading) {
             //load
         }
     }
@@ -64,42 +61,38 @@ public class PlayerWeapons : MonoBehaviour
 
     private void LoadDefaultWeaponData() {
         foreach (DWeapon dw in weaponsDataList) {
-            dw.IsPickedUp(false);
+            dw.IsInInventory = false;
         }
-    }
-
-    private void Fire() {
-            currentActiveWeapon.GetComponent<Animator>().SetBool("attack", true);
     }
 
     private void WeaponSelection() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            if (weaponsDataList[0].GetIsInInventory()) {
+            if (weaponsDataList[0].IsInInventory.Equals(true) && WeaponIsNotSelected(0)) {
                 SelectWeapon(0);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            if (weaponsDataList[1].GetIsInInventory()) {
+            if (weaponsDataList[1].IsInInventory.Equals(true) && WeaponIsNotSelected(1)) {
                 SelectWeapon(1);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            if (weaponsDataList[2].GetIsInInventory()) {
+            if (weaponsDataList[2].IsInInventory.Equals(true) && WeaponIsNotSelected(2)) {
                 SelectWeapon(2);
             }
         }
     }
 
-    private void SelectWeapon(int Index) {
-        currentActiveWeapon.SetActive(false);
-        currentActiveWeapon = weaponsObjectsList[Index];
-        currentActiveWeapon.SetActive(true);
+    private bool WeaponIsNotSelected(int index) {
+        return currentActiveWeapon != weaponsObjectsList[index];
     }
 
-    private void CancelAttackAnimation() {
-            currentActiveWeapon.GetComponent<Animator>().SetBool("attack", false);
+    private void SelectWeapon(int index) {
+        currentActiveWeapon.SetActive(false);
+        currentActiveWeapon = weaponsObjectsList[index];
+        currentActiveWeapon.SetActive(true);
     }
 
     #endregion
@@ -107,7 +100,7 @@ public class PlayerWeapons : MonoBehaviour
     #region Methods -> Public
 
     public void PickupWeapon(int index) {
-        weaponsDataList[index].IsPickedUp(true);
+        weaponsDataList[index].IsInInventory = true; SelectWeapon(index);
     }
 
     #endregion

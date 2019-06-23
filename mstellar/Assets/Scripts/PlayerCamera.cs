@@ -19,8 +19,6 @@ public class PlayerCamera : MonoBehaviour
     private float                 mouseY                = 0.0f;
     private float                 xAxisClamp            = 0.0f;
 
-    private bool                  shake                 = false;
-
     #endregion
 
     #region Methods -> UnityCallbacks

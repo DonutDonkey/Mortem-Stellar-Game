@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: WEP_01
   m_EditorClassIdentifier: 
   weaponTag: WEP_01
-  isInInventory: 0
-  projectile: {fileID: 0}
+  isAlwaysEquipped: 1
+  isInInventory: 1
   hasProjectile: 0
+  projectile: {fileID: 0}
   damageValue: 50
-  fireRate: 1
+  fireRate: 0.7
+  range: 100

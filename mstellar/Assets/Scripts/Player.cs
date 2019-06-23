@@ -5,7 +5,7 @@ public class Player : Actor
     #region Variables -> Private
 
     private PlayerController   controller;
-    private PlayerWeapons      weapons;
+    private PlayerWeapons      playerWeapons;
 
     private float              armor;
     private float              maxArmor;
@@ -25,15 +25,24 @@ public class Player : Actor
         controller = GetComponent<PlayerController>();
         controller.SetMaxSpeed(((DPlayer)actorData).maxSpeed);
 
-        weapons = GetComponent<PlayerWeapons>();
+        playerWeapons = GetComponent<PlayerWeapons>();
     }
 
     public override void Update() {
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other) {
-        if(other.tag == "WEP_02") {
-            weapons.PickupWeapon(2);
+        if (other.tag.Contains("WEP")) WeaponPickup(other);
+    }
+
+    private void WeaponPickup(Collider other) {
+        if (other.CompareTag("WEP_01")) {
+            playerWeapons.PickupWeapon(1);
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag("WEP_02")) {
+            playerWeapons.PickupWeapon(2);
             other.gameObject.SetActive(false);
         }
     }

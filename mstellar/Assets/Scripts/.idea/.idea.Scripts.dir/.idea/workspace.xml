@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cda11633-e5fe-417f-a6a0-03c4c0eb245e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Models/Character/Player/Player_modelView/Anim/Camera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../Models/Character/Player/Player_modelView/Anim/Camera.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Actor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnimatedEnvironment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnimatedEnvironment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DAnimatedTexture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DAnimatedTexture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DFloatValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DFloatValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OptionsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OptionsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerWeapons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerWeapons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpriteFacingScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpriteFacingScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPSceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPSceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UIImageFillSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UIImageFillSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Changelog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/Audio_Spectrum_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/Audio_Spectrum_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/Audio_Spectrum_Highest_Values_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/Audio_Spectrum_Highest_Values_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/FPS_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/FPS_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Allocated_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Allocated_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Mono_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Mono_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Reserved_Graph.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Materials/RAM_Reserved_Graph.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/CUIColorPicker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/CUIColorPicker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/G_CUIColorPicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/G_CUIColorPicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/G_CUIColorPicker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Color Picker/G_CUIColorPicker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/CustomizeGraphy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/CustomizeGraphy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/ForceSliderToMultipleOf3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/ForceSliderToMultipleOf3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/ForceSliderToPowerOf2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/ForceSliderToPowerOf2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/UpdateTextWithSliderValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Customization Scripts/UpdateTextWithSliderValue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Prefab/[Graphy] - Customizer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scene/Prefab/[Graphy] - Customizer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Advanced/G_AdvancedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Advanced/G_AdvancedData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Advanced/G_AdvancedData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Advanced/G_AdvancedData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioGraph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioMonitor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioMonitor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Audio/G_AudioText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/GraphyDebuggerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/GraphyDebuggerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/GraphyManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/GraphyManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/Tayx.Graphy.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/Tayx.Graphy.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/Tayx.Graphy.Editor.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Editor/Tayx.Graphy.Editor.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsGraph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsMonitor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsMonitor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Fps/G_FpsText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Graph/G_Graph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Graph/G_Graph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Graph/G_Graph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Graph/G_Graph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/GraphyDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/GraphyDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/GraphyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/GraphyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamGraph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamMonitor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamMonitor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Ram/G_RamText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Shader/G_GraphShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Shader/G_GraphShader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Shader/G_GraphShader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Shader/G_GraphShader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Tayx.Graphy.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Tayx.Graphy.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Tayx.Graphy.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Tayx.Graphy.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/UI/IModifiableState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/UI/IModifiableState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/UI/IMovable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/UI/IMovable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_ExtensionMethods.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_ExtensionMethods.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_ExtensionMethods.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_FloatString.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_FloatString.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_FloatString.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_FloatString.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Intstring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Intstring.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Intstring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Intstring.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Singleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Singleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Scripts/Util/G_Singleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Shaders/GraphMobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Shaders/GraphMobile.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Shaders/GraphStandard.shader" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Shaders/GraphStandard.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Debugger_Logo_Dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Debugger_Logo_Dark.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Debugger_Logo_White.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Debugger_Logo_White.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Manager_Logo_Dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Manager_Logo_Dark.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Manager_Logo_White.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Tayx/Graphy - Ultimate Stats Monitor/Textures/Manager_Logo_White.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Logs/Packages-Update.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../website/index.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AnimatedEnvironment.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Player.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/indexLayout.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="FileSystemExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cda11633-e5fe-417f-a6a0-03c4c0eb245e" name="Default Changelist" comment="" />
+      <created>1560693616662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560693616662</updated>
+      <workItem from="1560693618952" duration="519000" />
+      <workItem from="1560694396019" duration="77000" />
+      <workItem from="1560787505321" duration="247000" />
+      <workItem from="1560788341440" duration="1282000" />
+      <workItem from="1560789645937" duration="59000" />
+      <workItem from="1560789742097" duration="189000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2373000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1875333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <marker date="1560787892744" expanded="true" signature="47:1188" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="54:301" ph="Variables -&gt; Private" />
+            <marker date="1560787892744" expanded="true" signature="307:1158" ph="Variables -&gt; UnityCallbacks" />
+            <marker date="1560787892744" expanded="true" signature="377:652" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="688:695" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="757:824" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="872:1142" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="909:1004" ph="{...}" />
+            <marker date="1560787892744" expanded="true" signature="1041:1136" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnimatedEnvironment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

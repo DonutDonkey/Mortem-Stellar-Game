@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\KonradGM\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\KonradGM\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_mstellar.160007260.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Unity\Mortem-Stellar-Game\mstellar" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Actor.cs" t="Include" />
+          <e p="AnimatedEnvironment.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="GameManager.cs" t="Include" />
+          </e>
+          <e p="Data" t="Include">
+            <e p="DActor.cs" t="Include" />
+            <e p="DAnimatedTexture.cs" t="Include" />
+            <e p="DFloatValue.cs" t="Include" />
+            <e p="DPlayer.cs" t="Include" />
+            <e p="DWeapon.cs" t="Include" />
+          </e>
+          <e p="IActor.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="OptionsMenu.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerCamera.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerWeapons.cs" t="Include" />
+          <e p="SpriteFacingScript.cs" t="Include" />
+          <e p="TEMPSceneLoader.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="UIImageFillSetter.cs" t="Include" />
+          </e>
+          <e p="Weapon.cs" t="Include" />
+        </e>
+        <e p="Tayx" t="Include">
+          <e p="Graphy - Ultimate Stats Monitor" t="Include">
+            <e p="Changelog.txt" t="Include" />
+            <e p="Font" t="Include">
+              <e p="Northwest-Bold" t="Include">
+                <e p="ERIC-TIRADO-NORTHWEST-LICENSE.txt" t="Include" />
+              </e>
+              <e p="Roboto" t="Include">
+                <e p="LICENSE.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Scene" t="Include">
+              <e p="Color Picker" t="Include">
+                <e p="G_CUIColorPicker.cs" t="Include" />
+              </e>
+              <e p="Customization Scripts" t="Include">
+                <e p="CustomizeGraphy.cs" t="Include" />
+                <e p="ForceSliderToMultipleOf3.cs" t="Include" />
+                <e p="ForceSliderToPowerOf2.cs" t="Include" />
+                <e p="UpdateTextWithSliderValue.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Advanced" t="Include">
+                <e p="G_AdvancedData.cs" t="Include" />
+              </e>
+              <e p="Audio" t="Include">
+                <e p="G_AudioGraph.cs" t="Include" />
+                <e p="G_AudioManager.cs" t="Include" />
+                <e p="G_AudioMonitor.cs" t="Include" />
+                <e p="G_AudioText.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="GraphyDebuggerEditor.cs" t="Include" />
+                <e p="GraphyManagerEditor.cs" t="Include" />
+                <e p="Tayx.Graphy.Editor.asmdef" t="Include" />
+              </e>
+              <e p="Fps" t="Include">
+                <e p="G_FpsGraph.cs" t="Include" />
+                <e p="G_FpsManager.cs" t="Include" />
+                <e p="G_FpsMonitor.cs" t="Include" />
+                <e p="G_FpsText.cs" t="Include" />
+              </e>
+              <e p="Graph" t="Include">
+                <e p="G_Graph.cs" t="Include" />
+              </e>
+              <e p="GraphyDebugger.cs" t="Include" />
+              <e p="GraphyManager.cs" t="Include" />
+              <e p="Ram" t="Include">
+                <e p="G_RamGraph.cs" t="Include" />
+                <e p="G_RamManager.cs" t="Include" />
+                <e p="G_RamMonitor.cs" t="Include" />
+                <e p="G_RamText.cs" t="Include" />
+              </e>
+              <e p="Shader" t="Include">
+                <e p="G_GraphShader.cs" t="Include" />
+              </e>
+              <e p="Tayx.Graphy.asmdef" t="Include" />
+              <e p="UI" t="Include">
+                <e p="IModifiableState.cs" t="Include" />
+                <e p="IMovable.cs" t="Include" />
+              </e>
+              <e p="Util" t="Include">
+                <e p="G_ExtensionMethods.cs" t="Include" />
+                <e p="G_FloatString.cs" t="Include" />
+                <e p="G_Intstring.cs" t="Include" />
+                <e p="G_Singleton.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="GraphMobile.shader" t="Include" />
+              <e p="GraphStandard.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="mstellar.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Tayx.Graphy.csproj" t="IncludeRecursive" />
+      <e p="Tayx.Graphy.Editor.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
