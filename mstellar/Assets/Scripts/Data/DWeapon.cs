@@ -37,13 +37,15 @@ public class DWeapon : ScriptableObject
 
     #region Properties -> Public
 
-    public string   WeaponTag     { get { return weaponTag;     } set { weaponTag     = value; } }
+    public GameObject   Projectile      { get { return projectile; } }
 
-    public float    AmmoNumber    { get { return ammoNumber;    } set { ammoNumber    = value; } }
+    public string       WeaponTag       { get { return weaponTag;     } set { weaponTag     = value; } }
 
-    public bool     IsActive      { get { return isActive;      } set { isActive      = value; } }
-    public bool     HasProjectile { get { return hasProjectile; } }
-    public bool     IsInInventory { get { return isInInventory; } set { if(!isAlwaysEquipped) isInInventory = value; } }
+    public float        AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
+
+    public bool         HasProjectile   { get { return hasProjectile; } }
+    public bool         IsActive        { get { return isActive;      } set { isActive      = value; } }
+    public bool         IsInInventory   { get { return isInInventory; } set { if(!isAlwaysEquipped) isInInventory = value; } }
 
     #endregion
 

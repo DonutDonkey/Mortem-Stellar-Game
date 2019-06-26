@@ -16,7 +16,7 @@ MonoBehaviour:
   isAlwaysEquipped: 0
   isInInventory: 0
   hasProjectile: 1
-  projectile: {fileID: -927199367670048503, guid: ff619834faf0d8b43be5cb4358f3f52b,
+  projectile: {fileID: 125240953681853192, guid: 82356accb61d86b499ecc2c4a5cefb54,
     type: 3}
   damageValue: 100
   fireRate: 0.5

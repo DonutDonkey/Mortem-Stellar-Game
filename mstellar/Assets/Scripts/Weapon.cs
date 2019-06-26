@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     #region Variables -> Serialized Private
 
+    [SerializeField] private AudioSource   audioSource      = null;
+
     [SerializeField] private GameObject    particleSystem   = null;
 
-    [SerializeField] private AudioSource   audioSource      = null;
+    [SerializeField] private Transform     spawnPoint       = null;
 
     [SerializeField] private DWeapon       weaponData       = null;
 
@@ -16,13 +19,15 @@ public class Weapon : MonoBehaviour
 
     #region Variables -> Private
 
-    private static readonly int   Attack         = Animator.StringToHash("attack");
+    private static readonly int   Attack           = Animator.StringToHash("attack");
 
-    private Camera                modelViewCam   = null;
+    private List<GameObject>      projectileList   = null;
 
-    private Animator              animator       = null;
+    private Animator              animator         = null;
 
-    private float                 cooldown       = 0.0f;
+    private Camera                modelViewCam     = null;
+
+    private float                 cooldown         = 0.0f;
 
     #endregion
 
@@ -34,6 +39,7 @@ public class Weapon : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         if (particleSystem != null) particleSystem = Instantiate(particleSystem) as GameObject;
+        if (weaponData.HasProjectile) ProjectilePooling();
     }
 
     private void Update() {
@@ -49,6 +55,15 @@ public class Weapon : MonoBehaviour
     #endregion
 
     #region Methods -> Private
+
+    private void ProjectilePooling() {
+        projectileList = new List<GameObject>();
+        for (int i = 0; i < 5; i++) {
+            GameObject obj = Instantiate(weaponData.Projectile) as GameObject;
+            obj.SetActive(false);
+            projectileList.Add(obj);
+        }
+    }
 
     private void CheckForFire1Press() {
         if (Input.GetButtonDown(fireInputName) && Time.time > cooldown && animator.GetBool(Attack).Equals(false)) {
@@ -95,7 +110,18 @@ public class Weapon : MonoBehaviour
 
     private void AttackProjectile() {
         animator.SetBool(Attack, true);
-        Debug.Log("Projectile");
+        
+        for(int i=0; i < projectileList.Count; i++) {
+            if (!projectileList[i].activeInHierarchy) {
+                SpawnProjectile(i); break;
+            }
+        }
+    }
+
+    private void SpawnProjectile(int i) {
+        projectileList[i].transform.position = spawnPoint.transform.position;
+        projectileList[i].transform.rotation = spawnPoint.transform.rotation;
+        projectileList[i].SetActive(true);
     }
 
     /// <summary>
