@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Player : Actor
 {
@@ -57,22 +58,27 @@ public class Player : Actor
     }
 
     public override void TakeDamage(float value) {
+        ArmorDamage(ref value);
         HealthDamage(value);
-        ArmorDamage(value);
 
         ManagerAudio.Play(hurt);
         UIFlash.HurtFlash();
     }
 
+    private void ArmorDamage(ref float value) {
+        if (armor > 0) {
+            armor -= (float)Math.Round(value / 2);
+            if (armor < 0) armor -= armor;
+            value = (float)Math.Round(value / 2);
+        }
+        else return;
+    }
+
     private void HealthDamage(float value) {
-        health -= value - armor;
+        health -= value;
         if (health < 0) health -= health;
     }
 
-    private void ArmorDamage(float value) {
-        armor -= value;
-        if (armor < 0) armor -= armor;
-    }
 
     #endregion
 

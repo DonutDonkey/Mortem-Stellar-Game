@@ -5,6 +5,8 @@ public class DFloatValue : ScriptableObject
 {
     [SerializeField] private float   value   = 0.0f;
 
+    public void SetValue(float value) => this.value = value;
+
     public static implicit operator float(DFloatValue dFloatValue) {
         return dFloatValue.value;
     }
