@@ -4,8 +4,8 @@ public class SpriteFacingScript : MonoBehaviour
 {
     public Transform   target   = null;
 
-    private Vector3    point;
-    
+    private Vector3    point   = Vector3.zero;
+
     void Update() {
         if (target != null) {
             transform.LookAt(GetLookAtVector());

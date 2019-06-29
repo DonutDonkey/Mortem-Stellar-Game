@@ -19,21 +19,23 @@ public class Weapon : MonoBehaviour
 
     #region Variables -> Private
 
-    private static readonly int   Attack           = Animator.StringToHash("attack");
+    private static readonly int      Attack           = Animator.StringToHash("attack");
 
-    private List<GameObject>      projectileList   = null;
+    private static readonly string   HandWep          = "WEP_00";
 
-    private Animator              animator         = null;
+    private List<GameObject>         projectileList   = null;
 
-    private Camera                modelViewCam     = null;
+    private Animator                 animator         = null;
 
-    private float                 cooldown         = 0.0f;
+    private Camera                   modelViewCam     = null;
+
+    private float                    cooldown         = 0.0f;
 
     #endregion
 
     #region Methods -> Unity Callbacks
 
-    private void Awake() {
+    private void Start() {
         modelViewCam = GetComponentInParent<Camera>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -44,12 +46,6 @@ public class Weapon : MonoBehaviour
 
     private void Update() {
         CheckForFire1Press();
-    }
-
-    private void FixedUpdate()
-    {
-        var transform1 = modelViewCam.transform;
-        Debug.DrawRay(transform1.position, transform1.forward, Color.green);
     }
 
     #endregion
@@ -66,14 +62,20 @@ public class Weapon : MonoBehaviour
     }
 
     private void CheckForFire1Press() {
-        if (Input.GetButtonDown(fireInputName) && Time.time > cooldown && animator.GetBool(Attack).Equals(false)) {
-            Fire();
+        if (CheckForAmmo() || weaponData.WeaponTag == HandWep) {
+            if (Input.GetButtonDown(fireInputName) && Time.time > cooldown && animator.GetBool(Attack).Equals(false)) {
+                Fire();
+            }
         }
+    }
+
+    private bool CheckForAmmo() {
+        if (weaponData.AmmoNumber != null) return weaponData.AmmoNumber > 0;
+        else return true;
     }
 
     private void Fire() {
         cooldown = Time.time + weaponData.fireRate;
-        Debug.Log(cooldown);
         if (!weaponData.HasProjectile) {
             AttackRaycast();
         }
@@ -87,7 +89,7 @@ public class Weapon : MonoBehaviour
 
         if (Physics.Raycast(modelViewCam.transform.position, modelViewCam.transform.forward, out RaycastHit hit, weaponData.range)) {
 
-            Debug.Log("HIT: " + hit.transform.name); //Can hit palyer need to unfuck this
+            Debug.Log("HIT: " + hit.transform.name);
             Actor actor = hit.transform.GetComponent<Actor>();
 
             if (actor != null) {
@@ -98,6 +100,8 @@ public class Weapon : MonoBehaviour
                 ActivateParticle(hit);
             }
         }
+
+        TakeAmmo();
     }
 
     private void ActivateParticle(RaycastHit hit) {
@@ -116,6 +120,8 @@ public class Weapon : MonoBehaviour
                 SpawnProjectile(i); break;
             }
         }
+
+        TakeAmmo();
     }
 
     private void SpawnProjectile(int i) {
@@ -123,6 +129,15 @@ public class Weapon : MonoBehaviour
         projectileList[i].transform.rotation = spawnPoint.transform.rotation;
         projectileList[i].SetActive(true);
     }
+
+    private void TakeAmmo() {
+        if (weaponData.WeaponTag == HandWep) return;
+        weaponData.AmmoNumber--;
+    }
+
+    #endregion
+
+    #region Methods -> Animator Called
 
     /// <summary>
     /// Called by animator in game to cancel attack animation

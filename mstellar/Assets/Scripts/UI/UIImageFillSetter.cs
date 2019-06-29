@@ -4,8 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class UIImageFillSetter : MonoBehaviour
 {
-    [SerializeField]
-    private DFloatValue fillAmount = null;
+    [SerializeField] private DFloatValue   fillAmount   = null;
 
     private Image image;
 

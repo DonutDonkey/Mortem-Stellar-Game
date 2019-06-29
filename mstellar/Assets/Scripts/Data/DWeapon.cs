@@ -6,23 +6,28 @@ public class DWeapon : ScriptableObject
     #region Variables -> Serialized Private
 
     [Tooltip("Tag of weapon object")]
-    [SerializeField] private string       weaponTag          = null;
+    [SerializeField] private string        weaponTag          = null;
 
     [Tooltip("If true, then can't be deactivated, ONLY ACTIVATE ON WEAPON 00")]
-    [SerializeField] private bool         isAlwaysEquipped   = false;
+    [SerializeField] private bool          isAlwaysEquipped   = false;
     [Tooltip("If player picks up weapon switch to true")]
-    [SerializeField] private bool         isInInventory      = false;
+    [SerializeField] private bool          isInInventory      = false;
     [Tooltip("Check if weapon has projectile object")]
-    [SerializeField] private bool         hasProjectile      = false;
+    [SerializeField] private bool          hasProjectile      = false;
 
     [Tooltip("If weapon has projectile, spawn it during fire, otherwise stay null")]
-    [SerializeField] private GameObject   projectile         = null;
+    [SerializeField] private GameObject    projectile         = null;
+
+    [Tooltip("Max cappacity of player carried armor")]
+    [SerializeField] private float         maxAmmoNumber      = 0.0f;
+
+    [Tooltip("Current carried armor")]
+    [SerializeField] private DFloatValue   ammoNumber         = null;
 
     #endregion
 
     #region Variables -> Private
 
-    private float   ammoNumber   = 0.0f;
     private bool    isActive     = false;
 
     #endregion
@@ -41,7 +46,8 @@ public class DWeapon : ScriptableObject
 
     public string       WeaponTag       { get { return weaponTag;     } set { weaponTag     = value; } }
 
-    public float        AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
+    public DFloatValue  AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
+    public float        MaxAmmoNumber   { get { return maxAmmoNumber; }}
 
     public bool         HasProjectile   { get { return hasProjectile; } }
     public bool         IsActive        { get { return isActive;      } set { isActive      = value; } }
@@ -49,7 +55,4 @@ public class DWeapon : ScriptableObject
 
     #endregion
 
-    #region Methods -> Public
-
-    #endregion
 }

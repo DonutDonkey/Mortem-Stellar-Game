@@ -18,7 +18,7 @@ public class AnimatedEnvironment : MonoBehaviour
     IEnumerator Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        while(true) 
+        while (true) 
         {
             foreach (Texture i in animatedTexture.textures) {
                 meshRenderer.material.mainTexture = i;
