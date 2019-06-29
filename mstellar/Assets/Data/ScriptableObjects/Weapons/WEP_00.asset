@@ -17,6 +17,8 @@ MonoBehaviour:
   isInInventory: 1
   hasProjectile: 0
   projectile: {fileID: 0}
-  damageValue: 10
+  maxAmmoNumber: 0
+  ammoNumber: {fileID: 0}
+  damageValue: {fileID: 11400000, guid: e4c64fcbfa47ee24aaf20757baaad8d5, type: 2}
   fireRate: 0.7
   range: 1

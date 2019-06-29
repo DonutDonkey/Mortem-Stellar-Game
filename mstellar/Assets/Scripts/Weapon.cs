@@ -19,9 +19,9 @@ public class Weapon : MonoBehaviour
 
     #region Variables -> Private
 
-    private static readonly int      Attack           = Animator.StringToHash("attack");
-
     private static readonly string   HandWep          = "WEP_00";
+
+    private static readonly int      Attack           = Animator.StringToHash("attack");
 
     private List<GameObject>         projectileList   = null;
 

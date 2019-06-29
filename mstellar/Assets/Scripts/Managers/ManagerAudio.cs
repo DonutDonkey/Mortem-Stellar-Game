@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ManagerAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private AudioSource   source   = null;
+
+    private static AudioSource   s_source   = null;
+
+    private static AudioClip     s_clip     = null;
+
+    private void Awake() {
+        s_source = source;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public static void Play(AudioClip clip) {
+        s_clip = clip;
+        s_source.clip = s_clip;
+        s_source.Play();
     }
 }

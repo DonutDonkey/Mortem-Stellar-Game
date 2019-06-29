@@ -2,9 +2,9 @@
 
 public class SpriteFacingScript : MonoBehaviour
 {
-    public Transform   target   = null;
-
     private Vector3    point   = Vector3.zero;
+
+    public Transform   target   = null;
 
     void Update() {
         if (target != null) {

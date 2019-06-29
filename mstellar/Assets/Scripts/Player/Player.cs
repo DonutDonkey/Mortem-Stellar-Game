@@ -7,10 +7,17 @@ public class Player : Actor
     private PlayerController   controller;
     private PlayerWeapons      playerWeapons;
 
-    private float              armor;
-    private float              maxArmor;
+    private DFloatValue        armor;
+    private DFloatValue        maxArmor;
 
     private int                level;
+
+    #endregion
+
+    #region Variables -> Public
+
+    public AudioClip   weapon01pickup   = null;
+    public AudioClip   weapon02pickup   = null;
 
     #endregion
 
@@ -20,7 +27,7 @@ public class Player : Actor
         base.Start();
 
         maxArmor = ((DPlayer)actorData).maxArmor;
-        armor = maxArmor;
+        armor = ((DPlayer)actorData).armor;
 
         controller = GetComponent<PlayerController>();
         controller.SetMaxSpeed(((DPlayer)actorData).maxSpeed);
@@ -39,14 +46,32 @@ public class Player : Actor
         if (other.CompareTag("WEP_01")) {
             playerWeapons.PickupWeapon(1);
             other.gameObject.SetActive(false);
-            UIFlash.FlashScreen();
+            UIFlash.PickupFlash(); ManagerAudio.Play(weapon01pickup);
         }
 
         if (other.CompareTag("WEP_02")) {
             playerWeapons.PickupWeapon(2);
             other.gameObject.SetActive(false);
-            UIFlash.FlashScreen();
+            UIFlash.PickupFlash(); ManagerAudio.Play(weapon02pickup);
         }
+    }
+
+    public override void TakeDamage(float value) {
+        HealthDamage(value);
+        ArmorDamage(value);
+
+        ManagerAudio.Play(hurt);
+        UIFlash.HurtFlash();
+    }
+
+    private void HealthDamage(float value) {
+        health -= value - armor;
+        if (health < 0) health -= health;
+    }
+
+    private void ArmorDamage(float value) {
+        armor -= value;
+        if (armor < 0) armor -= armor;
     }
 
     #endregion

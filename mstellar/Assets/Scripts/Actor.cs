@@ -11,10 +11,16 @@ public class Actor : MonoBehaviour, IActor
 
     #region Variables -> Protected
 
-    protected float   health      = 0.0f;
-    protected float   maxHealth   = 0.0f;
+    protected DFloatValue   health      = null;
+    protected DFloatValue   maxHealth   = null;
 
-    protected bool    isAlive     = true;
+    protected bool          isAlive     = true;
+
+    #endregion
+
+    #region Variables -> Public 
+
+    public AudioClip   hurt   = null;
 
     #endregion
 
@@ -26,8 +32,7 @@ public class Actor : MonoBehaviour, IActor
 
     public virtual void Start() {
         maxHealth = actorData.maxHealth;
-
-        health = maxHealth;
+        health = actorData.health;
     }
 
     public virtual void Update() {
@@ -41,8 +46,10 @@ public class Actor : MonoBehaviour, IActor
     /// <summary>
     /// Reduce actor health by damage number
     /// </summary>
-    public void TakeDamage(float damageNumber) {
+    public virtual void TakeDamage(float damageNumber) {
         health = health - damageNumber;
+        //3d audio
+        Debug.Log("ACTOR TAKE DAMAGE");
     }
 
     /// <summary>

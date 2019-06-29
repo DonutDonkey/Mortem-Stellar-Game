@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class WProjectile : MonoBehaviour
 {
@@ -12,11 +13,13 @@ public class WProjectile : MonoBehaviour
 
     #region Variables -> Public
 
-    public GameObject   impact                = null;
+    public GameObject    impact                = null;
 
-    public float        projectileSpeed       = 1.0f;
-    public float        distance              = 100f;
-    public float        damageFalloffRadius   = 2.0f;
+    public DFloatValue   damage                = null;
+
+    public float         projectileSpeed       = 1.0f;
+    public float         distance              = 100f;
+    public float         damageFalloffRadius   = 2.5f;
 
     #endregion
 
@@ -50,15 +53,23 @@ public class WProjectile : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        if(Physics.SphereCast(transform.position, damageFalloffRadius, transform.forward, out RaycastHit hit)) {
-            Actor actor = hit.transform.GetComponent<Actor>();
+        Collider[] hit = Physics.OverlapSphere(transform.position, damageFalloffRadius);
+
+        foreach(Collider i in hit) {
+            Actor actor = i.transform.GetComponent<Actor>();
+
+            if (actor != null) {
+                float calculatedDamage = CalculateDamageFalloff(actor);
+                Debug.Log(calculatedDamage);
+                actor.TakeDamage(calculatedDamage);
+            }
         }
     }
 
-    //private void OnDrawGizmos() {
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(transform.position, damageFalloffRadius);
-    //}
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, damageFalloffRadius);
+    }
 
     #endregion
 
@@ -66,6 +77,18 @@ public class WProjectile : MonoBehaviour
 
     private bool CheckIfOutOfRange() {
         return Vector3.Distance(originPosition, transform.position) > distance;
+    }
+
+    private float CalculateDamageFalloff(Actor actor) {
+        if (DamageCalculation(actor) > 100) {
+            return 100;
+        } else {
+            return DamageCalculation(actor);
+        }
+    }
+
+    private float DamageCalculation(Actor actor) {
+        return (float)Math.Round(damage / (float)Math.Round(Vector3.Distance(transform.position, actor.transform.position)));
     }
 
     #endregion

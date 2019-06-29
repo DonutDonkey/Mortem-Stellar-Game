@@ -5,8 +5,17 @@ public class DWeapon : ScriptableObject
 {
     #region Variables -> Serialized Private
 
+    [Tooltip("Current carried armor")]
+    [SerializeField] private DFloatValue   ammoNumber         = null;
+
+    [Tooltip("If weapon has projectile, spawn it during fire, otherwise stay null")]
+    [SerializeField] private GameObject    projectile         = null;
+
     [Tooltip("Tag of weapon object")]
     [SerializeField] private string        weaponTag          = null;
+
+    [Tooltip("Max cappacity of player carried armor")]
+    [SerializeField] private float         maxAmmoNumber      = 0.0f;
 
     [Tooltip("If true, then can't be deactivated, ONLY ACTIVATE ON WEAPON 00")]
     [SerializeField] private bool          isAlwaysEquipped   = false;
@@ -14,15 +23,6 @@ public class DWeapon : ScriptableObject
     [SerializeField] private bool          isInInventory      = false;
     [Tooltip("Check if weapon has projectile object")]
     [SerializeField] private bool          hasProjectile      = false;
-
-    [Tooltip("If weapon has projectile, spawn it during fire, otherwise stay null")]
-    [SerializeField] private GameObject    projectile         = null;
-
-    [Tooltip("Max cappacity of player carried armor")]
-    [SerializeField] private float         maxAmmoNumber      = 0.0f;
-
-    [Tooltip("Current carried armor")]
-    [SerializeField] private DFloatValue   ammoNumber         = null;
 
     #endregion
 
@@ -34,19 +34,21 @@ public class DWeapon : ScriptableObject
 
     #region Variables -> Public
 
-    public float   damageValue   = 0.0f;
-    public float   fireRate      = 0.0f;
-    public float   range         = 0.0f;
+    public DFloatValue   damageValue   = null;
+
+    public float         fireRate      = 0.0f;
+    public float         range         = 0.0f;
 
     #endregion
 
     #region Properties -> Public
 
+    public DFloatValue  AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
+
     public GameObject   Projectile      { get { return projectile; } }
 
     public string       WeaponTag       { get { return weaponTag;     } set { weaponTag     = value; } }
 
-    public DFloatValue  AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
     public float        MaxAmmoNumber   { get { return maxAmmoNumber; }}
 
     public bool         HasProjectile   { get { return hasProjectile; } }
