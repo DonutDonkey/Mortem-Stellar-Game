@@ -9,10 +9,6 @@ public class PlayerData
 
     private SDWeapon sDWeapon;
 
-    //public PlayerData() {
-    //    //LoadSDP();
-    //}
-
     public void PathName (string name) {
         dataPath = Path.Combine(Application.persistentDataPath, name + ".xml");
     }

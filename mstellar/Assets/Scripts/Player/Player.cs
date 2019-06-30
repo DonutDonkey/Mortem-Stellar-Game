@@ -42,6 +42,8 @@ public class Player : Actor
         playerCamera = GetComponent<PlayerCamera>();
 
         transform = GetComponent<Transform>();
+
+        LoadDefault();
     }
 
     public override void Update() {
@@ -49,6 +51,12 @@ public class Player : Actor
 
     private void OnTriggerEnter(UnityEngine.Collider other) {
         if (other.tag.Contains("WEP")) WeaponPickup(other);
+    }
+
+    private void LoadDefault() {
+        DPlayer dp = (DPlayer)actorData;
+        dp.health.SetValue(dp.maxHealth);
+        dp.armor.SetValue(0);
     }
 
     private void WeaponPickup(Collider other) {

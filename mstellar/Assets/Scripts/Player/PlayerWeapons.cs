@@ -39,14 +39,24 @@ public class PlayerWeapons : MonoBehaviour
 
     private void LoadPlayer() {
         LoadWeaponObjects();
+        LoadDefaultWeaponData();
 
-        currentActiveWeapon = weaponsObjectsList[activeIndex];
+        currentActiveWeapon = weaponsObjectsList[0];
         currentActiveWeapon.SetActive(true);
+        activeIndex = 0;
     }
 
     private void LoadWeaponObjects() {
         foreach (GameObject go in weaponsObjectsList) {
             go.SetActive(false);
+        }
+    }
+
+    private void LoadDefaultWeaponData() {
+        foreach (DWeapon dw in weaponsDataList) {
+            dw.IsInInventory = false;
+
+            if(dw.AmmoNumber != null) dw.AmmoNumber.SetValue(0);
         }
     }
 

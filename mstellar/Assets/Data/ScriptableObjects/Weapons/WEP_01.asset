@@ -17,7 +17,7 @@ MonoBehaviour:
   weaponTag: WEP_01
   maxAmmoNumber: 50
   isAlwaysEquipped: 0
-  isInInventory: 1
+  isInInventory: 0
   hasProjectile: 0
   damageValue: {fileID: 11400000, guid: 2c865ffd15c324f418fe0984cce53c90, type: 2}
   fireRate: 0.7
