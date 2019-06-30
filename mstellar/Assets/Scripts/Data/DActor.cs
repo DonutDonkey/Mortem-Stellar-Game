@@ -3,7 +3,9 @@
 [CreateAssetMenu(fileName = "New Actor", menuName = "Game Specific Objects/Actor")]
 public class DActor : ScriptableObject
 {
-    public DFloatValue health;
+    public DFloatValue   health;
 
-    public DFloatValue maxHealth;
+    public DFloatValue   maxHealth;
+
+    public bool          isAlive;
 }

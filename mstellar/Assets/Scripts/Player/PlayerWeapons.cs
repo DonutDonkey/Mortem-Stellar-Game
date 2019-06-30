@@ -15,24 +15,18 @@ public class PlayerWeapons : MonoBehaviour
 
     private GameObject   currentActiveWeapon   = null;
 
-    private bool         isLoading             = false;
-
-    #endregion
-
-    #region Variables -> Public
-
-    #endregion
-
-    #region Properties -> Public
-
-    public bool   IsLoading { get { return isLoading; } set { isLoading = value; } }
+    public static int    activeIndex           = 0;
 
     #endregion
 
     #region Methods -> UnityCallbacks
 
-    private void Start() {
+    private void Awake() {
         LoadPlayer();
+    }
+
+    private void OnEnable() {
+        SelectWeapon(activeIndex);
     }
 
     void Update() {
@@ -44,25 +38,15 @@ public class PlayerWeapons : MonoBehaviour
     #region Methods -> Private
 
     private void LoadPlayer() {
-        LoadDefaultWeaponObjects(); LoadDefaultWeaponData();
+        LoadWeaponObjects();
 
-        currentActiveWeapon = weaponsObjectsList[0];
+        currentActiveWeapon = weaponsObjectsList[activeIndex];
         currentActiveWeapon.SetActive(true);
-
-        if (IsLoading) {
-            //TODO:LOAD
-        }
     }
 
-    private void LoadDefaultWeaponObjects() {
+    private void LoadWeaponObjects() {
         foreach (GameObject go in weaponsObjectsList) {
             go.SetActive(false);
-        }
-    }
-
-    private void LoadDefaultWeaponData() {
-        foreach (DWeapon dw in weaponsDataList) {
-            dw.IsInInventory = false;
         }
     }
 
@@ -94,6 +78,8 @@ public class PlayerWeapons : MonoBehaviour
         currentActiveWeapon.SetActive(false);
         currentActiveWeapon = weaponsObjectsList[index];
         currentActiveWeapon.SetActive(true);
+
+        activeIndex = index;
     }
 
     #endregion

@@ -35,7 +35,7 @@ public class Weapon : MonoBehaviour
 
     #region Methods -> Unity Callbacks
 
-    private void Start() {
+    private void Awake() {
         modelViewCam = GetComponentInParent<Camera>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();

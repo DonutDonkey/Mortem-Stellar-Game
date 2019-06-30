@@ -43,18 +43,26 @@ public class DWeapon : ScriptableObject
 
     #region Properties -> Public
 
-    public DFloatValue  AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
+    public DFloatValue   AmmoNumber      { get { return ammoNumber;    } set { ammoNumber    = value; } }
 
-    public GameObject   Projectile      { get { return projectile; } }
+    public GameObject    Projectile      { get { return projectile; } }
 
-    public string       WeaponTag       { get { return weaponTag;     } set { weaponTag     = value; } }
+    public string        WeaponTag       { get { return weaponTag;     } set { weaponTag     = value; } }
 
-    public float        MaxAmmoNumber   { get { return maxAmmoNumber; }}
+    public float         MaxAmmoNumber   { get { return maxAmmoNumber; }}
 
-    public bool         HasProjectile   { get { return hasProjectile; } }
-    public bool         IsActive        { get { return isActive;      } set { isActive      = value; } }
-    public bool         IsInInventory   { get { return isInInventory; } set { if(!isAlwaysEquipped) isInInventory = value; } }
+    public bool          HasProjectile   { get { return hasProjectile; } }
+    public bool          IsActive        { get { return isActive;      } set { isActive      = value; } }
+    public bool          IsInInventory   { get { return isInInventory; } set { if(!isAlwaysEquipped) isInInventory = value; } }
 
     #endregion
 
+    #region Methods -> Public
+
+    public void Load(SDWeapon sDWeapon) {
+        isInInventory = sDWeapon.isInInventory;
+        ammoNumber.SetValue(sDWeapon.ammoNumber);
+    }
+
+    #endregion
 }

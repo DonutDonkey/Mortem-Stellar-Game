@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5827de9073018847aeb3994b2e4d393, type: 3}
   m_Name: WEP_01
   m_EditorClassIdentifier: 
-  weaponTag: WEP_01
-  isAlwaysEquipped: 0
-  isInInventory: 0
-  hasProjectile: 0
-  projectile: {fileID: 0}
-  maxAmmoNumber: 50
   ammoNumber: {fileID: 11400000, guid: 0eb99aeb67d98e84ebaebd82658883b8, type: 2}
+  projectile: {fileID: 0}
+  weaponTag: WEP_01
+  maxAmmoNumber: 50
+  isAlwaysEquipped: 0
+  isInInventory: 1
+  hasProjectile: 0
   damageValue: {fileID: 11400000, guid: 2c865ffd15c324f418fe0984cce53c90, type: 2}
   fireRate: 0.7
   range: 100

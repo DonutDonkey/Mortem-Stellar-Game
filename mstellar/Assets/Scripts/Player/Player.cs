@@ -5,11 +5,16 @@ public class Player : Actor
 {
     #region Variables -> Private
 
-    private PlayerController   controller;
+    private PlayerController   playerController;
+
     private PlayerWeapons      playerWeapons;
+
+    private PlayerCamera       playerCamera;
 
     private DFloatValue        armor;
     private DFloatValue        maxArmor;
+
+    private Transform          transform;
 
     private int                level;
 
@@ -30,10 +35,13 @@ public class Player : Actor
         maxArmor = ((DPlayer)actorData).maxArmor;
         armor = ((DPlayer)actorData).armor;
 
-        controller = GetComponent<PlayerController>();
-        controller.SetMaxSpeed(((DPlayer)actorData).maxSpeed);
+        playerController = GetComponent<PlayerController>();
+        playerController.SetMaxSpeed(((DPlayer)actorData).maxSpeed);
 
         playerWeapons = GetComponent<PlayerWeapons>();
+        playerCamera = GetComponent<PlayerCamera>();
+
+        transform = GetComponent<Transform>();
     }
 
     public override void Update() {

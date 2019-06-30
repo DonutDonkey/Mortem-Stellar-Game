@@ -36,7 +36,6 @@ public class Actor : MonoBehaviour, IActor
     }
 
     public virtual void Update() {
-
     }
 
     #endregion
