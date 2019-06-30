@@ -26,4 +26,14 @@ public class UIFlash : MonoBehaviour
         image.color = Color.red;
         animator.SetBool("NotActive", false);
     }
+
+    public static void HpFlash() {
+        image.color = Color.blue;
+        animator.SetBool("NotActive", false);
+    }
+
+    public static void ArmorFlash() {
+        image.color = Color.green;
+        animator.SetBool("NotActive", false);
+    }
 }

@@ -57,6 +57,21 @@ public class Player : Actor
         }
     }
 
+
+    private void ArmorDamage(ref float value) {
+        if (armor > 0) {
+            armor -= (float)Math.Round(value / 2);
+            if (armor < 0) armor.SetValue(0);
+            value = (float)Math.Round(value / 2);
+        }
+        else return;
+    }
+
+    private void HealthDamage(float value) {
+        health -= value;
+        if (health < 0) health.SetValue(0);
+    }
+
     public override void TakeDamage(float value) {
         ArmorDamage(ref value);
         HealthDamage(value);
@@ -65,20 +80,23 @@ public class Player : Actor
         UIFlash.HurtFlash();
     }
 
-    private void ArmorDamage(ref float value) {
-        if (armor > 0) {
-            armor -= (float)Math.Round(value / 2);
-            if (armor < 0) armor -= armor;
-            value = (float)Math.Round(value / 2);
-        }
-        else return;
+    public void PickupHP(float value) {
+        health += value;
+        if (health > maxHealth) health.SetValue(maxHealth);
     }
 
-    private void HealthDamage(float value) {
-        health -= value;
-        if (health < 0) health -= health;
+    public void PickupArmor(float value) {
+        armor += value;
+        if (armor > maxArmor) armor.SetValue(maxArmor);
     }
 
+    public bool IsFullOnHP() {
+        return health.IsEqual(maxHealth);
+    }
+
+    public bool IsFullOnArmor() {
+        return armor.IsEqual(maxArmor);
+    }
 
     #endregion
 

@@ -7,6 +7,8 @@ public class DFloatValue : ScriptableObject
 
     public void SetValue(float value) => this.value = value;
 
+    public bool IsEqual(DFloatValue dfValue) => value == dfValue.value;
+
     public static implicit operator float(DFloatValue dFloatValue) {
         return dFloatValue.value;
     }
@@ -30,5 +32,4 @@ public class DFloatValue : ScriptableObject
         dFloatValue.value -= value;
         return dFloatValue;
     }
-
 }

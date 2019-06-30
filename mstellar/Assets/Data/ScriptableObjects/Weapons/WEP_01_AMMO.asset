@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200c2af70cec6d342a384c08a9fb80f6, type: 3}
   m_Name: WEP_01_AMMO
   m_EditorClassIdentifier: 
-  value: 50
+  value: 0
