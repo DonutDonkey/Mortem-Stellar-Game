@@ -1,13 +1,13 @@
 ﻿using System.IO;
 using UnityEngine;
 
-public class PlayerData
+public class IOPlayerData
 {
-    private string   dataPath   = null;
+    private SDPlayer   sDPlayer;
 
-    private SDPlayer sDPlayer;
+    private SDWeapon   sDWeapon;
 
-    private SDWeapon sDWeapon;
+    private string     dataPath   = null;
 
     public void PathName (string name) {
         dataPath = Path.Combine(Application.persistentDataPath, name + ".xml");
@@ -18,11 +18,7 @@ public class PlayerData
 
         sDPlayer = new SDPlayer(DPlayer, transform);
 
-        string jsonString = JsonUtility.ToJson(sDPlayer);
-
-        using (StreamWriter streamWriter = File.CreateText(dataPath)) {
-            streamWriter.Write(jsonString);
-        }
+        Save(sDPlayer);
     }
 
     public void SaveWeapon(DWeapon DWeapon, string weaponNumber) {
@@ -30,10 +26,18 @@ public class PlayerData
 
         sDWeapon = new SDWeapon(DWeapon);
 
-        string jsonString = JsonUtility.ToJson(sDWeapon);
+        Save(sDWeapon);
+    }
 
-        using (StreamWriter streamWriter = File.CreateText(dataPath)) {
-            streamWriter.Write(jsonString);
+    private void Save(object data) {
+        if (data is DPlayer || data is DWeapon) {
+            string jsonString = JsonUtility.ToJson(data);
+
+            using (StreamWriter streamWriter = File.CreateText(dataPath)) {
+                streamWriter.Write(jsonString);
+            }
+        } else {
+            throw new System.ArgumentException("Parametr must be of type DPlayer or DWeapon", "data");
         }
     }
 
@@ -51,6 +55,10 @@ public class PlayerData
             string jsonString = streamReader.ReadToEnd();
             return JsonUtility.FromJson<SDWeapon>(jsonString);
         }
+    }
+
+    public object ReturnTest(object obj) {
+        return obj;
     }
 
     public Vector3 LoadPosition() {

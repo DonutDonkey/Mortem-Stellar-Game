@@ -15,9 +15,11 @@ public class PlayerCamera : MonoBehaviour
 
     #region Variables -> Private
 
-    private float                 mouseX                = 0.0f;
-    private float                 mouseY                = 0.0f;
-    private float                 xAxisClamp            = 0.0f;
+    private static Transform   transform     = null;
+
+    private float             mouseX       = 0.0f;
+    private float             mouseY       = 0.0f;
+    private float             xAxisClamp   = 0.0f;
 
     #endregion
 
@@ -26,6 +28,7 @@ public class PlayerCamera : MonoBehaviour
     private void Awake() {
         LockCursor();
         xAxisClamp = 0.0f;
+        transform = GetComponent<Transform>();
     }
 
 
@@ -75,6 +78,14 @@ public class PlayerCamera : MonoBehaviour
         transform.Rotate(Vector3.left * mouseY);
 
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    #endregion
+
+    #region Methods -> Public
+
+    public static void CameraKickBack() {
+        
     }
 
     #endregion

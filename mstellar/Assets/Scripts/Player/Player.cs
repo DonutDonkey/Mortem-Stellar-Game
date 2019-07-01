@@ -27,7 +27,7 @@ public class Player : Actor
 
     #endregion
 
-    #region Variables -> UnityCallbacks
+    #region Methods -> UnityCallbacks
 
     public override void Start() {
         base.Start();
@@ -50,8 +50,12 @@ public class Player : Actor
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other) {
-        if (other.tag.Contains("WEP")) WeaponPickup(other);
+        if (other.tag.Contains("WEP")) CheckWeaponId(other);
     }
+
+    #endregion
+
+    #region Methods -> Private 
 
     private void LoadDefault() {
         DPlayer dp = (DPlayer)actorData;
@@ -59,20 +63,21 @@ public class Player : Actor
         dp.armor.SetValue(0);
     }
 
-    private void WeaponPickup(Collider other) {
+    private void CheckWeaponId(Collider other) {
         if (other.CompareTag("WEP_01")) {
-            playerWeapons.PickupWeapon(1);
-            other.gameObject.SetActive(false);
-            UIFlash.PickupFlash(); ManagerAudio.Play(weapon01pickup);
+            WeaponPickup(other, 1);
         }
 
         if (other.CompareTag("WEP_02")) {
-            playerWeapons.PickupWeapon(2);
-            other.gameObject.SetActive(false);
-            UIFlash.PickupFlash(); ManagerAudio.Play(weapon02pickup);
+            WeaponPickup(other, 2);
         }
     }
 
+    private void WeaponPickup(Collider other, int index) {
+        playerWeapons.PickupWeapon(index);
+        other.gameObject.SetActive(false);
+        UIFlash.PickupFlash(); ManagerAudio.Play(weapon01pickup);
+    }
 
     private void ArmorDamage(ref float value) {
         if (armor > 0) {
@@ -87,6 +92,10 @@ public class Player : Actor
         health -= value;
         if (health < 0) health.SetValue(0);
     }
+
+    #endregion
+
+    #region Methods -> Public
 
     public override void TakeDamage(float value) {
         ArmorDamage(ref value);

@@ -44,25 +44,17 @@ public class WProjectile : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        AudioSource source = impact.GetComponent<AudioSource>();
-        ParticleSystem particle = impact.GetComponent<ParticleSystem>();
+        AudioSource source; ParticleSystem particle;
 
-        impact.transform.position = transform.position;
-        source.Play();
-        particle.Play();
+        GetImpactComponents(out source, out particle);
+        SpawnImpactParticles(source, particle);
 
         gameObject.SetActive(false);
 
         Collider[] hit = Physics.OverlapSphere(transform.position, damageFalloffRadius);
 
-        foreach(Collider i in hit) {
-            Actor actor = i.transform.GetComponent<Actor>();
-
-            if (actor != null) {
-                float calculatedDamage = CalculateDamageFalloff(actor);
-                Debug.Log(calculatedDamage);
-                actor.TakeDamage(calculatedDamage);
-            }
+        foreach (Collider i in hit) {
+            DamageActorsIfHit(i);
         }
     }
 
@@ -77,6 +69,27 @@ public class WProjectile : MonoBehaviour
 
     private bool CheckIfOutOfRange() {
         return Vector3.Distance(originPosition, transform.position) > distance;
+    }
+
+    private void GetImpactComponents(out AudioSource source, out ParticleSystem particle) {
+        source = impact.GetComponent<AudioSource>();
+        particle = impact.GetComponent<ParticleSystem>();
+    }
+
+    private void SpawnImpactParticles(AudioSource source, ParticleSystem particle) {
+        impact.transform.position = transform.position;
+        source.Play();
+        particle.Play();
+    }
+
+    private void DamageActorsIfHit(Collider i) {
+        Actor actor = i.transform.GetComponent<Actor>();
+
+        if (actor != null) {
+            float calculatedDamage = CalculateDamageFalloff(actor);
+            Debug.Log(calculatedDamage);
+            actor.TakeDamage(calculatedDamage);
+        }
     }
 
     private float CalculateDamageFalloff(Actor actor) {

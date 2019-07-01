@@ -33,6 +33,12 @@ public class Weapon : MonoBehaviour
 
     #endregion
 
+    #region Variables -> Public 
+
+    public GameObject   cam   = null;
+
+    #endregion
+
     #region Methods -> Unity Callbacks
 
     private void Awake() {

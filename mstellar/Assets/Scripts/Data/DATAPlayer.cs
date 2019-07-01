@@ -3,16 +3,18 @@ using UnityEngine;
 
 [Serializable]
 public struct SDPlayer {
+    public Quaternion   rotation;
+    public Vector3      position;
+
     public float        health;
     public float        maxHealth;
     public float        armor;
     public float        maxArmor;
     public float        maxSpeed;
-    public int          activeIndex;
 
     public bool         isAlive;
-    public Vector3      position;
-    public Quaternion   rotation;
+
+    public int          activeIndex;
 
     public SDPlayer(DPlayer dPlayer, Transform transform) {
         health = dPlayer.health;
@@ -30,6 +32,7 @@ public struct SDPlayer {
 [Serializable]
 public struct SDWeapon {
     public float   ammoNumber;
+
     public bool    isInInventory;
 
     public SDWeapon(DWeapon dWeapon) {

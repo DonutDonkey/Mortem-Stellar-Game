@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerSave : MonoBehaviour
+public class SAVEPlayer : MonoBehaviour
 {
     [SerializeField] private DPlayer      dPlayer      = null;
 
@@ -9,18 +9,18 @@ public class PlayerSave : MonoBehaviour
 
     [SerializeField] private GameObject   player      = null;
 
-    private PlayerData   playerData   = null;
+    private IOPlayerData   IOplayerData   = null;
 
     private void Awake() {
-        playerData = new PlayerData();
+        IOplayerData = new IOPlayerData();
     }
 
     //Will be in menu each save is different thing
     private void Update() {
         if(Input.GetKeyUp(KeyCode.F5)) {
-            playerData.SavePlayer(dPlayer, player.transform);
-            playerData.SaveWeapon(dWeapon01, "01");
-            playerData.SaveWeapon(dWeapon02, "02");
+            IOplayerData.SavePlayer(dPlayer, player.transform);
+            IOplayerData.SaveWeapon(dWeapon01, "01");
+            IOplayerData.SaveWeapon(dWeapon02, "02");
         }
         if (Input.GetKeyUp(KeyCode.F8)) {
             LoadPlayer();
@@ -30,17 +30,17 @@ public class PlayerSave : MonoBehaviour
 
     private void LoadPlayer() {
         player.SetActive(false);
-        dPlayer.Load(playerData.LoadPlayer());
-        player.transform.position = playerData.LoadPosition();
-        player.transform.rotation = playerData.LoadRotation();
+        dPlayer.Load(IOplayerData.LoadPlayer());
+        player.transform.position = IOplayerData.LoadPosition();
+        player.transform.rotation = IOplayerData.LoadRotation();
         player.SetActive(true);
     }
 
     private void LoadWeapons() {
         player.SetActive(false);
-        dWeapon01.Load(playerData.LoadWeapon("01"));
-        dWeapon02.Load(playerData.LoadWeapon("02"));
-        PlayerWeapons.activeIndex = playerData.LoadActiveWeapon();
+        dWeapon01.Load(IOplayerData.LoadWeapon("01"));
+        dWeapon02.Load(IOplayerData.LoadWeapon("02"));
+        PlayerWeapons.activeIndex = IOplayerData.LoadActiveWeapon();
         player.SetActive(true);
     } 
 }

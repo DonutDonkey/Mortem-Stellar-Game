@@ -62,21 +62,21 @@ public class PlayerWeapons : MonoBehaviour
 
     private void WeaponSelection() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            if (weaponsDataList[0].IsInInventory.Equals(true) && WeaponIsNotSelected(0)) {
-                SelectWeapon(0);
-            }
+            CheckIfWeaponIsEquippedAndNotCurrentlyActive(0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            if (weaponsDataList[1].IsInInventory.Equals(true) && WeaponIsNotSelected(1)) {
-                SelectWeapon(1);
-            }
+            CheckIfWeaponIsEquippedAndNotCurrentlyActive(1);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            if (weaponsDataList[2].IsInInventory.Equals(true) && WeaponIsNotSelected(2)) {
-                SelectWeapon(2);
-            }
+            CheckIfWeaponIsEquippedAndNotCurrentlyActive(2);
+        }
+    }
+
+    private void CheckIfWeaponIsEquippedAndNotCurrentlyActive(int index) {
+        if (weaponsDataList[index].IsInInventory.Equals(true) && WeaponIsNotSelected(index)) {
+            SelectWeapon(index);
         }
     }
 
