@@ -250,7 +250,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cab5327b555a21a4b99ba927df3e7e82, type: 2}
+  - {fileID: 2100000, guid: d9f3a78fb7a97d048b887a2f68b06dc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1245,7 +1245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cab5327b555a21a4b99ba927df3e7e82, type: 2}
+  - {fileID: 2100000, guid: d9f3a78fb7a97d048b887a2f68b06dc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1934,7 +1934,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cab5327b555a21a4b99ba927df3e7e82, type: 2}
+  - {fileID: 2100000, guid: d9f3a78fb7a97d048b887a2f68b06dc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2052,7 +2052,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cab5327b555a21a4b99ba927df3e7e82, type: 2}
+  - {fileID: 2100000, guid: d9f3a78fb7a97d048b887a2f68b06dc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3209,6 +3209,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278351931505959717, guid: 5fce8994a41d4b4468a4f6d879212d14,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2247946365500008331, guid: 5fce8994a41d4b4468a4f6d879212d14,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278351932035741006, guid: 5fce8994a41d4b4468a4f6d879212d14,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fce8994a41d4b4468a4f6d879212d14, type: 3}
