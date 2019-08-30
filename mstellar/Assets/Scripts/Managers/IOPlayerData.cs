@@ -30,14 +30,14 @@ public class IOPlayerData
     }
 
     private void Save(object data) {
-        if (data is SDPlayer || data is SDWeapon) {
+        if (data is DPlayer || data is DWeapon) {
             string jsonString = JsonUtility.ToJson(data);
 
             using (StreamWriter streamWriter = File.CreateText(dataPath)) {
                 streamWriter.Write(jsonString);
             }
         } else {
-            throw new System.ArgumentException("Parametr must be of type SDPlayer or SDWeapon", "data");
+            throw new System.ArgumentException("Parametr must be of type DPlayer or DWeapon", "data");
         }
     }
 

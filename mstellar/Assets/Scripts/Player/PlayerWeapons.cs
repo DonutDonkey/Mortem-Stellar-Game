@@ -41,7 +41,7 @@ public class PlayerWeapons : MonoBehaviour
         LoadWeaponObjects();
         LoadDefaultWeaponData();
 
-        currentActiveWeapon = weaponsObjectsList[activeIndex];
+        currentActiveWeapon = weaponsObjectsList[0];
         currentActiveWeapon.SetActive(true);
         activeIndex = 0;
     }
