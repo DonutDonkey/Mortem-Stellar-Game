@@ -14,7 +14,7 @@ public class Player : Actor
     private DFloatValue        armor;
     private DFloatValue        maxArmor;
 
-    private Transform          transform;
+    private new Transform      transform;
 
     private int                level;
 

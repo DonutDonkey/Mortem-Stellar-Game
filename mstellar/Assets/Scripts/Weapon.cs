@@ -92,7 +92,6 @@ public class Weapon : MonoBehaviour
 
     private void AttackRaycast() {
         animator.SetBool(Attack, true);
-
         if (Physics.Raycast(modelViewCam.transform.position, modelViewCam.transform.forward, out RaycastHit hit, weaponData.range)) {
 
             Debug.Log("HIT: " + hit.transform.name);

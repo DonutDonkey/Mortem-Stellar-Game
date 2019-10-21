@@ -43,7 +43,7 @@ public class IOPlayerData
 
     public SDPlayer LoadPlayer() {
         PathName("DPlayer");
-        using (StreamReader streamReader = File.OpenText(dataPath)) {
+        using (StreamReader streamReader = File.OpenText(dataPath)){ 
             string jsonString = streamReader.ReadToEnd();
             return JsonUtility.FromJson<SDPlayer>(jsonString);
         }

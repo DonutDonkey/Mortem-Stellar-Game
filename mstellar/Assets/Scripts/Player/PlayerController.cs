@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     private bool                  speedIsDecreasing     = false;
     private bool                  isJumping             = false;
+    
+    private static readonly int   IsGrounded            = Animator.StringToHash("isGrounded");
+    private static readonly int   Velocity              = Animator.StringToHash("velocity");
 
     #endregion
 
@@ -34,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public string   horizontalInputName   = "Horizontal";
     public string   verticalInputName     = "Vertical";
     public string   jumpInputName         = "Jump";
-
+    
     #endregion
 
     #region Methods -> Unity Callbacks
@@ -58,6 +61,7 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
         characterController.Move(moveDirection * Time.deltaTime);
 
+        PlayerCamera.CameraHorizontalMovementTilt(Input.GetAxis(horizontalInputName));
         HeadBob();
     }
 
@@ -72,6 +76,7 @@ public class PlayerController : MonoBehaviour
     private void UpdateMovement() {
         moveDirection = new Vector3(Input.GetAxis(horizontalInputName), 0.0f, Input.GetAxis(verticalInputName));
         moveDirection *= movementSpeed;
+
         UpdateTransform();
     }
 
@@ -110,7 +115,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private IEnumerator DecreaseSpeed() {
-        while (5.0f < movementSpeed && speedIsDecreasing) {
+        while (4.0f < movementSpeed && speedIsDecreasing) {
             movementSpeed -= speedChangeDiameter;
             yield return new WaitForSeconds(0.1f);
         }
@@ -126,8 +131,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HeadBob() {
-        cameraAnimator.SetFloat("velocity", characterController.velocity.magnitude);
-        cameraAnimator.SetBool("isGrounded", characterController.isGrounded);
+
     }
 
     #endregion
